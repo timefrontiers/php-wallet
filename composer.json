@@ -1,0 +1,53 @@
+{
+  "name": "timefrontiers/php-wallet",
+  "description": "Blockchain-like immutable wallet and transaction system with file-based ledger",
+  "keywords": ["php", "wallet", "transaction", "ledger", "blockchain", "immutable", "fintech"],
+  "homepage": "https://github.com/timefrontiers/php-wallet",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ikechukwu Okalia",
+      "email": "consult@ikechukwuokalia.dev",
+      "homepage": "https://ikechukwuokalia.dev",
+      "role": "developer"
+    },
+    {
+      "name": "Time Frontiers Ltd",
+      "email": "git@timefrontiers.com",
+      "homepage": "https://git.timefrontiers.com",
+      "role": "developer"
+    }
+  ],
+  "require": {
+    "php": ">=8.1",
+    "ext-pdo": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^10.0"
+  },
+  "suggest": {
+    "timefrontiers/php-core": "For TimeFrontiers ecosystem integration",
+    "timefrontiers/php-validator": "For input validation"
+  },
+  "autoload": {
+    "psr-4": {
+      "TimeFrontiers\\Wallet\\": "src/",
+      "TimeFrontiers\\Wallet\\Ledger\\": "src/Ledger/",
+      "TimeFrontiers\\Wallet\\Payment\\": "src/Payment/",
+      "TimeFrontiers\\Wallet\\Exchange\\": "src/Exchange/",
+      "TimeFrontiers\\Wallet\\Exception\\": "src/Exception/"
+    },
+    "files": [
+      "src/Exception/WalletExceptions.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "TimeFrontiers\\Wallet\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "phpunit"
+  }
+}
