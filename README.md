@@ -424,4 +424,4 @@ try {
 
 ## License
 
-MIT
+[MIT License](LICENSE)
